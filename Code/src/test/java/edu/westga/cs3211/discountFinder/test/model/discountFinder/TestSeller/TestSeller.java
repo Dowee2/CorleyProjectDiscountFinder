@@ -31,6 +31,6 @@ class TestSeller {
 
     @Test
     void testEmptyName() {
-        assertThrows(IllegalArgumentException.class, () -> new Seller(-100, ""));
+        assertThrows(IllegalArgumentException.class, () -> new Seller(50, ""));
     }
 }

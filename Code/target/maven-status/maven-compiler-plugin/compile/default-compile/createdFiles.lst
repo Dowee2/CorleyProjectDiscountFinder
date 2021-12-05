@@ -1,5 +1,6 @@
 edu\westga\cs3211\discountFinder\model\DiscountFinder.class
 edu\westga\cs3211\discountFinder\model\CreateDiscountList.class
+edu\westga\cs3211\discountFinder\model\Filter$1.class
 edu\westga\cs3211\discountFinder\model\Item.class
 edu\westga\cs3211\discountFinder\model\Category.class
 edu\westga\cs3211\discountFinder\Main.class

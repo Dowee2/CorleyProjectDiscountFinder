@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="8.29">
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\Main.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\Main.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Category.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Category.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\CreateDiscountList.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\CreateDiscountList.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\DiscountFinder.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\DiscountFinder.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\DistanceEnum.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\DistanceEnum.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Filter.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Filter.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Item.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Item.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Seller.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\model\Seller.java">
 </file>
-<file name="C:\Users\Dowee\Desktop\School\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\view\codebehind\MainWindow.java">
+<file name="C:\Users\tcoltra1\Desktop\New folder\CorleyProjectDiscountFinder\Code\src\main\java\edu\westga\cs3211\discountFinder\view\codebehind\MainWindow.java">
 </file>
 </checkstyle>

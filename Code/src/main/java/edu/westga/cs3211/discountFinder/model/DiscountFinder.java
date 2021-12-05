@@ -31,16 +31,6 @@ public class DiscountFinder {
     }
 
     /**
-     * Add item into the list
-     * 
-     * @param item the item in the list
-     */
-
-    public void addItem(Item item) {
-        this.items.add(item);
-    }
-
-    /**
      * get the index of the item
      * 
      * @param index the place in the list
