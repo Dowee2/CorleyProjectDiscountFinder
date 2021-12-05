@@ -10,32 +10,25 @@ public class Seller {
     private String sellerName;
    
 <span class="fc" id="L12">    public Seller(int distance, String sellerName) {</span>
-<span class="fc bfc" id="L13" title="All 2 branches covered.">        if (distance &lt; 0) {</span>
-<span class="fc" id="L14">            throw new IllegalArgumentException(&quot;Distance can not be negative&quot;);</span>
+<span class="fc bfc" id="L13" title="All 2 branches covered.">        if (sellerName == null) {</span>
+<span class="fc" id="L14">            throw new IllegalArgumentException(&quot;Name can not be null&quot;);</span>
         }
-<span class="fc bfc" id="L16" title="All 2 branches covered.">        if (sellerName == null) {</span>
-<span class="fc" id="L17">            throw new IllegalArgumentException(&quot;Name can not be null&quot;);</span>
+<span class="fc bfc" id="L16" title="All 2 branches covered.">        if (sellerName.isEmpty()) {</span>
+<span class="fc" id="L17">            throw new IllegalArgumentException(&quot;Name can not be empty&quot;);</span>
         }
-<span class="pc bpc" id="L19" title="1 of 2 branches missed.">        if (sellerName.isEmpty()) {</span>
-<span class="nc" id="L20">            throw new IllegalArgumentException(&quot;Name can not be empty&quot;);</span>
+<span class="fc bfc" id="L19" title="All 2 branches covered.">        if (distance &lt; 0) {</span>
+<span class="fc" id="L20">            throw new IllegalArgumentException(&quot;Distance can not be negative&quot;);</span>
         }
-
-<span class="fc" id="L23">        this.distance = distance;</span>
-<span class="fc" id="L24">        this.sellerName = sellerName;</span>
-<span class="fc" id="L25">    }</span>
+<span class="fc" id="L22">        this.distance = distance;</span>
+<span class="fc" id="L23">        this.sellerName = sellerName;</span>
+<span class="fc" id="L24">    }</span>
   
     public int getDistance() {
-<span class="fc" id="L28">        return this.distance;</span>
+<span class="fc" id="L27">        return this.distance;</span>
     }
 
     public String getSellerName() {
-<span class="fc" id="L32">        return this.sellerName;</span>
-    }
-
-    public int calculateDistance(int distance) {
-<span class="nc" id="L36">        int result = 0;</span>
-<span class="nc" id="L37">        result = this.getDistance() - distance;</span>
-<span class="nc" id="L38">        return Math.abs(result);</span>
+<span class="fc" id="L31">        return this.sellerName;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
