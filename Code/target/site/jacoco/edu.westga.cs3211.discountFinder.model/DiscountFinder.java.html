@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>DiscountFinder.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Sample-Code-Coverage-Project</a> &gt; <a href="index.source.html" class="el_package">edu.westga.cs3211.discountFinder.model</a> &gt; <span class="el_source">DiscountFinder.java</span></div><h1>DiscountFinder.java</h1><pre class="source lang-java linenums">package edu.westga.cs3211.discountFinder.model;
 
+/**Discount Finder class
+ * 
+ */
 import java.util.ArrayList;
 
 public class DiscountFinder {
@@ -7,26 +10,53 @@ public class DiscountFinder {
     private ArrayList&lt;Item&gt; items;
     private CreateDiscountList generatedList;
 
-<span class="nc" id="L10">    public DiscountFinder() {</span>
-<span class="nc" id="L11">        this.generatedList = new CreateDiscountList();</span>
-<span class="nc" id="L12">        this.items = this.generatedList.returnItemList();</span>
-<span class="nc" id="L13">    }</span>
+    /**
+     * Instantitates the list
+     * 
+     */
+<span class="nc" id="L17">    public DiscountFinder() {</span>
+<span class="nc" id="L18">        this.generatedList = new CreateDiscountList();</span>
+<span class="nc" id="L19">        this.items = this.generatedList.returnItemList();</span>
+<span class="nc" id="L20">    }</span>
+
+    /**
+     * gets the items in the list
+     * 
+     * @return the items in the list
+     */
 
     public ArrayList&lt;Item&gt; getItems() {
-<span class="nc" id="L16">        return this.items;</span>
+<span class="nc" id="L29">        return this.items;</span>
 
     }
+
+    /**
+     * Adds and Item to the list
+     * 
+     * @param item the item in the list
+     */
 
     public void addItem(Item item) {
-<span class="nc" id="L21">        this.items.add(item);</span>
-<span class="nc" id="L22">    }</span>
+<span class="nc" id="L40">        this.items.add(item);</span>
+<span class="nc" id="L41">    }</span>
 
+    /**
+     * get the index of the item
+     * 
+     * @param index the place in the list
+     * @return the item index
+     */
     public Item getItem(int index) {
-<span class="nc" id="L25">        return this.items.get(index);</span>
+<span class="nc" id="L50">        return this.items.get(index);</span>
     }
 
+    /**
+     * get the size of the list
+     * 
+     * @return the size of the list
+     */
     public int size() {
-<span class="nc" id="L29">        return this.items.size();</span>
+<span class="nc" id="L59">        return this.items.size();</span>
     }
 
 }

@@ -1,6 +1,6 @@
 package edu.westga.cs3211.discountFinder.model;
 /**Item class
- * 
+ * @author Team 1
  * @version CS 3211
  */
 public class Item {
@@ -61,7 +61,7 @@ public class Item {
     }
     
     /**deafult to string for the items
-     * 
+     * @return String toString
      */
 
     public String toString() {

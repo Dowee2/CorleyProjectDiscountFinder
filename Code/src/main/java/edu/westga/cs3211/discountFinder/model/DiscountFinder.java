@@ -31,6 +31,7 @@ public class DiscountFinder {
     }
 
     /**
+     * Adds and Item to the list
      * 
      * @param item the item in the list
      */
