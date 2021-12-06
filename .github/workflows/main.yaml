@@ -2,7 +2,7 @@
 #establish triggers for action
 on: 
  push:
-  branches: [development]
+  branches: [release]
 #establish jobs for the workflow of the action
 jobs:
  #define the test job 
