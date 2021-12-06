@@ -1,0 +1,9 @@
+Use-Case: Shopper wants to clear filter
+Actor: Shopper
+Shopper wants to find specific item
+Flow:
+1.	Shopper looks for discounts (use-case 1)
+2.	Shopper wants to clear filter
+3.	Shopper clicks clear filter
+4.	System clears filter and displays all discounts
+

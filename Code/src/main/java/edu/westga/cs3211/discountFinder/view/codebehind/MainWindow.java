@@ -2,6 +2,8 @@ package edu.westga.cs3211.discountFinder.view.codebehind;
 
 import edu.westga.cs3211.discountFinder.model.Category;
 import edu.westga.cs3211.discountFinder.model.DiscountFinder;
+import edu.westga.cs3211.discountFinder.model.DistanceEnum;
+import edu.westga.cs3211.discountFinder.model.Filter;
 import edu.westga.cs3211.discountFinder.model.Item;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
@@ -13,9 +15,10 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-/*
-
-*/
+/**
+ * MainWindow code behind
+ * @author Team 1
+ */
 public class MainWindow {
 	@FXML
     private Button addItemFilterButton;
@@ -41,13 +44,15 @@ public class MainWindow {
     @FXML
     private TextField filterByDistanceTextField;
 
-    @FXML
-    private Button addDistanceFilterButton;
 
     @FXML
     private ComboBox<Category> categoriesCombobox;
+
+    @FXML
+    private ComboBox<DistanceEnum> distanceFromComboBox;
 	
 	private DiscountFinder finder;
+
 
 
     private void initializeListView() {
@@ -56,17 +61,16 @@ public class MainWindow {
 		this.itemsListView.itemsProperty().setValue(filtered);
 	}
 
-	private void populateList() {
-	}
 
 	@FXML
     void handleFindItemButton(ActionEvent event) {
-		// if (this.filterItemByTextField.getText().isEmpty()) {
-		// 	this.initializeListView();
-		// } else {
-		// 	ObservableList<Item> filtered = new SimpleListProperty<Item>(FXCollections.observableArrayList(this.finder.findDiscountsForItem(this.filterItemByTextField.getText())));
-		// 	this.itemsListView.itemsProperty().setValue(filtered);
-		// }
+		if (this.filterItemByTextField.getText().isEmpty()) {
+			this.initializeListView();
+		} else {
+			ObservableList<Item> filtered = new SimpleListProperty<Item>(FXCollections.observableArrayList(Filter.filterByName(this.finder.getItems(), this.filterItemByTextField.getText())));
+            
+			this.itemsListView.itemsProperty().setValue(filtered);
+		}
     }
 
 	@FXML
@@ -76,34 +80,81 @@ public class MainWindow {
 
 	@FXML
     void onFavoriteSeller(ActionEvent event) {
-
+        if (this.itemsListView.getSelectionModel().getSelectedItem() != null) {
+            
+            this.itemsListView.getSelectionModel().getSelectedItem().getSeller().setFavorite();
+            this.initializeListView();
+        }
+        
     }
 
     @FXML
     void handleDisplaySellerButton(ActionEvent event) {
-
+        if (this.filterBySellerTextField.getText().isEmpty()) {
+			this.initializeListView();
+		} else {
+			ObservableList<Item> filtered = new SimpleListProperty<Item>(FXCollections.observableArrayList(Filter.filterBySeller(this.finder.getItems(), this.filterBySellerTextField.getText())));
+            
+			this.itemsListView.itemsProperty().setValue(filtered);
+		} 
     }
 
-    @FXML
-    void handleDistanceFilterButton(ActionEvent event) {
-		
+    private void setupListenerForDistanceCombobox() {
+
+        this.distanceFromComboBox.getSelectionModel().selectedItemProperty().addListener((observable, oldDistance, newDistance) -> {
+            if (newDistance != null) {
+                ObservableList<Item> filtered = new SimpleListProperty<Item>(FXCollections.observableArrayList(Filter.filterByDistance(this.finder.getItems(), newDistance)));
+                this.itemsListView.itemsProperty().setValue(filtered);
+            } else if (oldDistance == null) {
+                this.initializeListView();
+            }
+        });
+    }
+/*
+*/
+    private void setupListenerForListSelect() {
+        this.itemsListView.getSelectionModel().selectedItemProperty().addListener((observable, oldSelect, newSelect) -> {
+            if (newSelect != null) {
+                this.filterItemByTextField.setText(newSelect.getName());
+                this.filterBySellerTextField.setText(newSelect.getSeller().getSellerName());
+            }
+        });
     }
 
 	private void populateComboBox() {
-		this.categoriesCombobox.getItems().add(Category.APPLIANCES);
-		this.categoriesCombobox.getItems().add(Category.CLOTHING);
-		this.categoriesCombobox.getItems().add(Category.ELECTRONICS);
-		this.categoriesCombobox.getItems().add(Category.FOOD);
-		this.categoriesCombobox.getItems().add(Category.OTHER);
+        for (Category category : Category.values()) {
+            this.categoriesCombobox.getItems().add(category);
+        }
+
+        for (DistanceEnum distanceEnum : DistanceEnum.values()) {
+            this.distanceFromComboBox.getItems().add(distanceEnum);
+        }
 	}
-    /*
-    */
+
+    private void setupListenerForCategoriesCombobox() {
+
+        this.categoriesCombobox.getSelectionModel().selectedItemProperty().addListener((observable, oldCategory, newCategory) -> {
+            if (newCategory != null) {
+                ObservableList<Item> filtered = new SimpleListProperty<Item>(FXCollections.observableArrayList(Filter.filterByCategory(this.finder.getItems(), newCategory)));
+                this.itemsListView.itemsProperty().setValue(filtered);
+            } else if (oldCategory == null) {
+                this.initializeListView();
+            }
+        });
+    }
+
+    /**
+     * Initializes Webpage
+     */
     @FXML
 	public void initialize() {
 		this.finder = new DiscountFinder();
-		this.populateList();
 		this.initializeListView();
 		this.populateComboBox();
+        this.setupListenerForCategoriesCombobox();
+        this.setupListenerForDistanceCombobox();
+
+        this.setupListenerForListSelect();
 	}
 
 }

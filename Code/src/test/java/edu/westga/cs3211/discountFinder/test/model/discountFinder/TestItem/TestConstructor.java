@@ -17,8 +17,7 @@ class TestConstructor{
         Item item = new Item("name", seller, Category.APPLIANCES);
 
         assertAll(
-            () -> assertEquals("name", item.getName()),
-            () -> assertEquals("", item.getFavorite())
+            () -> assertEquals("name", item.getName())
         );
     }
 
@@ -39,27 +38,9 @@ class TestConstructor{
             new Item("", seller, Category.APPLIANCES);
         });
     }
-
-    @Test
-    void testSetFavoriteIsFavorited() {
-        Seller seller = new Seller(50, "seller");
-        Item item = new Item("name", seller, Category.CLOTHING);
-
-        item.setFavorite();
-
-        assertEquals("*", item.getFavorite());
-    }
     
     @Test
-    void testSetFavoriteIsNotFavorited() {
-        Seller seller = new Seller(50, "seller");
-        Item item = new Item("name", seller, Category.ELECTRONICS);
-
-        assertEquals("", item.getFavorite());
-    }
-
-    @Test
-    void testToStringNoFavorite() {
+    void testToStringNoFavorited() {
         Seller seller = new Seller(50, "seller");
         Item item = new Item("name", seller, Category.FOOD);
 
@@ -69,9 +50,10 @@ class TestConstructor{
     @Test
     void testToStringFavorite() {
         Seller seller = new Seller(50, "seller");
-        Item item = new Item("name", seller, Category.OTHER);
-        item.setFavorite();
+        seller.setFavorite();
+        Item item = new Item("name", seller, Category.FOOD);
 
-        assertEquals("name at seller in OTHER *", item.toString());
+        assertEquals("name at seller in FOOD *", item.toString());
     }
+
 }

@@ -14,13 +14,13 @@
       <TextField fx:id="filterItemByTextField" layoutX="81.0" layoutY="14.0" />
       <ListView fx:id="itemsListView" layoutX="31.0" layoutY="123.0" prefHeight="275.0" prefWidth="523.0" />
       <Button fx:id="FavoriteSellerButton" layoutX="347.0" layoutY="44.0" mnemonicParsing="false" onAction="#onFavoriteSeller" prefHeight="25.0" prefWidth="99.0" text="Favorite Seller" />
-      <Text layoutX="17.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item:" />
+      <Text layoutX="4.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item:" />
       <Button fx:id="addDisplayFilterButton" layoutX="236.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleDisplaySellerButton" prefHeight="25.0" prefWidth="99.0" text="Display Seller" />
-      <Text layoutX="17.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller :" />
+      <Text layoutX="4.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller :" />
       <TextField fx:id="filterBySellerTextField" layoutX="81.0" layoutY="44.0" />
-      <Text layoutX="17.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Distance:" />
+      <Text layoutX="4.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Location:" />
       <TextField fx:id="filterByDistanceTextField" layoutX="81.0" layoutY="79.0" />
-      <Button fx:id="addDistanceFilterButton" layoutX="236.0" layoutY="79.0" mnemonicParsing="false" onAction="#handleDistanceFilterButton" prefHeight="25.0" prefWidth="99.0" text="Filter Distance" />
       <ComboBox fx:id="categoriesCombobox" layoutX="412.0" layoutY="6.0" prefWidth="150.0" promptText="Categories" />
+      <ComboBox fx:id="distanceFromComboBox" layoutX="293.0" layoutY="79.0" prefWidth="150.0" promptText="Distance From" />
    </children>
 </AnchorPane>

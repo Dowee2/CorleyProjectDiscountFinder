@@ -33,4 +33,13 @@ class TestSeller {
     void testEmptyName() {
         assertThrows(IllegalArgumentException.class, () -> new Seller(-100, ""));
     }
+
+    @Test
+    void testFavoriteSeller() {
+        Seller seller = new Seller(100, "Nike");
+        seller.setFavorite();
+        assertAll(
+            () -> assertEquals("*", seller.getFavorite())
+        );
+    }
 }

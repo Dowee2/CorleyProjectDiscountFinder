@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="10.0" minWidth="10.0" prefHeight="412.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.westga.cs3211.discountFinder.view.codebehind.MainWindow">
+   <children>
+      <Button fx:id="addItemFilterButton" layoutX="236.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleFindItemButton" prefHeight="25.0" prefWidth="79.0" text="Find Item" />
+      <Button fx:id="clearFiltersList" layoutX="484.0" layoutY="87.0" mnemonicParsing="false" onAction="#handleClearButton" text="Clear Filters" />
+      <TextField fx:id="filterItemByTextField" layoutX="81.0" layoutY="14.0" />
+      <ListView fx:id="itemsListView" layoutX="31.0" layoutY="123.0" prefHeight="275.0" prefWidth="523.0" />
+      <Button fx:id="FavoriteSellerButton" layoutX="347.0" layoutY="44.0" mnemonicParsing="false" onAction="#onFavoriteSeller" prefHeight="25.0" prefWidth="99.0" text="Favorite Seller" />
+      <Text layoutX="4.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Item:" />
+      <Button fx:id="addDisplayFilterButton" layoutX="236.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleDisplaySellerButton" prefHeight="25.0" prefWidth="99.0" text="Display Seller" />
+      <Text layoutX="4.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seller :" />
+      <TextField fx:id="filterBySellerTextField" layoutX="81.0" layoutY="44.0" />
+      <Text layoutX="4.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Location:" />
+      <TextField fx:id="filterByDistanceTextField" layoutX="81.0" layoutY="79.0" />
+      <ComboBox fx:id="categoriesCombobox" layoutX="412.0" layoutY="6.0" prefWidth="150.0" promptText="Categories" />
+      <ComboBox fx:id="distanceFromComboBox" layoutX="293.0" layoutY="79.0" prefWidth="150.0" promptText="Distance From" />
+   </children>
+</AnchorPane>

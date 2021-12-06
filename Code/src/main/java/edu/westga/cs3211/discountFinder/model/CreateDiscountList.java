@@ -5,13 +5,19 @@ package edu.westga.cs3211.discountFinder.model;
  */
 import java.util.ArrayList;
 
-/**Creates the discount list
+
+/**
+ * Creates the discount list
+ * 
  * @author Team 1
  */
 
 public class CreateDiscountList {
     private ArrayList<Item> itemList;
 
+    /**
+     * creates a default list
+     */
     public CreateDiscountList() {
         this.itemList = new ArrayList<Item>();
         Seller dell = new Seller(25, "Dell");
