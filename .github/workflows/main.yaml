@@ -1,8 +1,8 @@
-#SAMPLE Github Action YAML
+l#SAMPLE Github Action YAML
 #establish triggers for action
 on: 
  push:
-  branches: [release]
+  branches: [development]
 #establish jobs for the workflow of the action
 jobs:
  #define the test job 
