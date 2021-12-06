@@ -5,6 +5,7 @@ package edu.westga.cs3211.discountFinder.model;
  */
 import java.util.ArrayList;
 
+
 /**
  * Creates the discount list
  * 
