@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: edu.westga.cs3211.discountFinder.test.model.discountFinder.TestFilter.TestFilterByCategory
--------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.02 s - in edu.westga.cs3211.discountFinder.test.model.discountFinder.TestFilter.TestFilterByCategory
